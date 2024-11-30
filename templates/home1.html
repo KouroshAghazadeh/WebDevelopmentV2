@@ -1,0 +1,43 @@
+<!DOCTOR html>
+<html xmlns="http://www.w3.org/1999/html">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kourosh Carees</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+      #banner {
+          width: 100%;
+          height: 460px;
+          object-fit: cover;
+      }
+  </style>
+  </head>
+  <body>
+  <div class="container">
+    <h1 class="text-center mt-2 mb-4">Kourosh Career</h1>
+    <img class="img-fluid" id="banner" src="https://images.squarespace-cdn.com/content/v1/5a9096e11137a6fdeeb6c490/1521493650079-BC84VX9M5POWWS4TWQJZ/great-4.jpg?format=1500w">
+    <h2 class="text-center mt-2 mb-4"> About Kourosh </h2>
+    <p class="lead">
+      Ipsum sem arcu venenatis ex aliquet. Venenatis libero mi eu sem ipsum felis dignissim vestibulum velit. Ex penatibus lectus montes posuere sollicitudin torquent sit nunc. Volutpat aenean senectus auctor et phasellus ante maximus at ac curae. Lorem maecenas suspendisse accumsan lectus amet purus.
+
+Morbi aptent pulvinar luctus vel duis faucibus interdum molestie eleifend platea. Tortor semper inceptos sociosqu tincidunt cras. Potenti fringilla ridiculus lobortis laoreet at consequat semper. Platea felis dictumst metus ante non ullamcorper eu urna enim finibus senectus.
+
+Congue erat lobortis arcu nunc morbi mattis porta semper pretium habitant. Venenatis tempor consequat ultricies arcu cras sociosqu aptent tellus augue volutpat ornare. Mattis egestas himenaeos diam vestibulum senectus mauris habitasse. Sit lobortis pede laoreet quam congue id neque penatibus. Vivamus mus faucibus consequat condimentum nascetur nibh scelerisque rutrum maecenas metus.
+    </p>
+    <h2 class="text-center mt-2 mb-4"> Open Positions </h2>
+    <p>
+        {% for job in jobs %}
+            {% include 'jobitems.html' %}
+        {% endfor %}
+    </p>
+    <div class="text-center">
+    <button class="btn btn-primary btn-lg"> Contact us</button>
+    </div>
+        <p class="text-center mt-4">
+        Copyright 2024, Kourosh
+    </p>
+
+    </div>
+  </body>
+</html>

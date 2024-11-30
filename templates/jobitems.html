@@ -1,0 +1,15 @@
+<div class="border-bottom mb-4 row" style="padding-bottom: 20px">
+    <div class="col-9">
+    <h4 class="mb-2" style="color: rgb(120,120,120)">{{job['Title']}}</h4>
+    <div><b>Location :</b> {{job['Location']}}</div>
+    {% if job['Salary'] > 120000 %}
+        <div><b>Salary :</b> {{job['Salary']}}</div>
+        <p><b>Desc :</b> Its Have Some Special Options For Employees!!</p>
+    {% else %}
+        <div><b>Salary :</b> {{job['Salary']}}</div>
+    {% endif %}
+    </div>
+    <div class="col-3 align-content-center">
+    <button type="button" class="btn btn-outline-primary">Apply</button>
+    </div>
+</div>

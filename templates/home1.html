@@ -10,22 +10,28 @@
           width: 100%;
           height: 460px;
           object-fit: cover;
+          margin-bottom: 16px;
       }
   </style>
   </head>
   <body>
   {% include 'nav.html' %}
+  <img class="img-fluid" id="banner" src="https://images.squarespace-cdn.com/content/v1/5a9096e11137a6fdeeb6c490/1521493650079-BC84VX9M5POWWS4TWQJZ/great-4.jpg?format=1500w">
   <div class="container">
-    <h1 class="text-center mt-2 mb-4">Kourosh Career</h1>
-    <img class="img-fluid" id="banner" src="https://images.squarespace-cdn.com/content/v1/5a9096e11137a6fdeeb6c490/1521493650079-BC84VX9M5POWWS4TWQJZ/great-4.jpg?format=1500w">
-    <h2 class="text-center mt-2 mb-4"> About Kourosh </h2>
-    <p class="lead">
+   <h2 class="text-center mt-2 mb-4">Kourosh Career</h2>
+  <div class="row" style="margin-bottom: 16px">
+  <div class="col-md-6">
+   <p class="lead">
       Ipsum sem arcu venenatis ex aliquet. Venenatis libero mi eu sem ipsum felis dignissim vestibulum velit. Ex penatibus lectus montes posuere sollicitudin torquent sit nunc. Volutpat aenean senectus auctor et phasellus ante maximus at ac curae. Lorem maecenas suspendisse accumsan lectus amet purus.
 
 Morbi aptent pulvinar luctus vel duis faucibus interdum molestie eleifend platea. Tortor semper inceptos sociosqu tincidunt cras. Potenti fringilla ridiculus lobortis laoreet at consequat semper. Platea felis dictumst metus ante non ullamcorper eu urna enim finibus senectus.
 
 Congue erat lobortis arcu nunc morbi mattis porta semper pretium habitant. Venenatis tempor consequat ultricies arcu cras sociosqu aptent tellus augue volutpat ornare. Mattis egestas himenaeos diam vestibulum senectus mauris habitasse. Sit lobortis pede laoreet quam congue id neque penatibus. Vivamus mus faucibus consequat condimentum nascetur nibh scelerisque rutrum maecenas metus.
     </p>
+  </div>
+  <div class="d-none d-md-block col-md-6">
+      <img src="https://assets.entrepreneur.com/content/3x2/2000/20180313173216-GettyImages-692292412.jpeg" style="height: 440px">
+  </div>
     <h2 class="text-center mt-2 mb-4"> Open Positions </h2>
     <p>
         {% for job in jobs %}
@@ -33,7 +39,7 @@ Congue erat lobortis arcu nunc morbi mattis porta semper pretium habitant. Venen
         {% endfor %}
     </p>
     <div class="text-center">
-    <button class="btn btn-primary btn-lg"> Contact us</button>
+    <a class="btn btn-primary btn-lg" href="mailto:m.aghazadeh@son.ir?subject=Cantact&body=My%20name%3A%20%3CYour%20name%20here%3E%0D%0A%0D%0AMy%20Question%3A%20%3CEnter%20question%3E"> Contact us</a>
     </div>
     </div>
   {% include 'footer.html' %}

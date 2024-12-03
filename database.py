@@ -7,7 +7,6 @@ engine = create_engine(
     db_connection,
     connect_args={
         'ssl': {
-            'sslmode': 'REQUIRED',
             'ca': 'C:/Users/m.aghazadeh/Downloads/ca.pem'
         }
     })

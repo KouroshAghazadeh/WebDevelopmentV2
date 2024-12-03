@@ -1,6 +1,7 @@
 from sqlalchemy import create_engine, text
 import os
 
+
 db_connection = os.environ['DB_CONNECTION']
 
 engine = create_engine(

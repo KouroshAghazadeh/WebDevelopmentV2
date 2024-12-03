@@ -2,12 +2,20 @@
     <div class="col-9">
     <h4 class="mb-2" style="color: rgb(120,120,120)">{{job['Title']}}</h4>
     <div><b>Location :</b> {{job['Location']}}</div>
-    {% if job['Salary'] > 120000 %}
+    {% if job['Salary'] > 10000 %}
         <div><b>Salary :</b> {{job['Salary']}}</div>
         <p><b>Desc :</b> Its Have Some Special Options For Employees!!</p>
+        <div style="margin-top: -15px"><b>Responsibilities :</b> {{ job['Responsibilities']}}</div>
     {% else %}
         <div><b>Salary :</b> {{job['Salary']}}</div>
+        <div><b>Responsibilities :</b> {{ job['Responsibilities']}}</div>
     {% endif %}
+        <div><b>Requirements: </b></div>
+    <ol>
+        {% for line in job.Requirements.split(",") %}
+        <li>{{line}}</li>
+        {% endfor %}
+    </ol>
     </div>
     <div class="col-3 align-content-center">
     <a type="button" target="_blank" href=mailto:m.aghazadeh@son.ir?subject=Application%20for%20{{job['Title']}}}&body=My%20name%3A%20%3CYour%20Name%20Here%3E%0D%0A%0D%0AMy%20Question%3A%20%3CEnter%20Question%3E%0D%0A%0D%0AMy%20Linkdin%3A%20%3CEnter%20Linkdin%20Link%3E" class="btn btn-outline-primary">Apply</a>

@@ -2,6 +2,8 @@
 <html>
 <head>
     <title>Application Submitted</title>
+    {% include 'bootstrap.html' %}
+    {% include 'nav.html' %}
 </head>
 <body>
 <h4>Full Name</h4>
@@ -9,5 +11,6 @@
 
 <h4>Email</h4>
 <div> {{ application['email']}}</div>
+{% include 'footer.html' %}
 </body>
 </html>

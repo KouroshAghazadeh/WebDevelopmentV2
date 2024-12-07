@@ -21,7 +21,7 @@ def list_jobs():
 def list_apps():
     return render_template('application_forms.html')
 
-@app.route('/jobs'/<id>/apply, methods=["POST", "GET"])
+@app.route('/jobs/<id>/apply', methods=["POST", "GET"])
 def apply_job(id):
     data = request.form
 

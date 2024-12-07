@@ -6,7 +6,7 @@
   <body>
     {% include 'nav.html' %}
     <h4>Application Form</h4>
-    <form>
+    <form action="/job/{{job['id']}}/apply" method="Post">
     <div class="mb-2">
     <label>Full_Name</label><br>
     <input type="text" name="Full_name" placeholder="Bruce Wayne">
@@ -19,7 +19,15 @@
     <label>LinkdIn</label><br>
     <input type="text" name="email" placeholder="https://LinkdIn.com/">
     </div>
-    <input type="submit" name="submit">
+    <input type="submit">
+    <div class="mb-2">
+        <label>Education</label><br>
+        <textarea name="education"></textarea>
+    </div>
+    <div class="mb-2">
+        <label>Work Experience</label>
+        <textarea name="work experience"></textarea>
+    </div>
     </form>
     {% include 'footer.html' %}
   </body>

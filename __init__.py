@@ -21,10 +21,10 @@ def list_jobs():
 def list_apps():
     return render_template('application_forms.html')
 
-@app.route('/jobs/<id>/apply', methods=["POST"])
+@app.route('/jobs/<id>/apply', methods=["post"])
 def apply_job(id):
     data = request.form
-
+    return jsonify(data)
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -24,4 +24,4 @@ def load_jobs_from_db():
 def add_application_to_db(application):
     with engine.connect() as conn:
         query = text("Insert into applications (full_name, email) values (:full_name, :email)")
-        conn.execute(query, full_name=application['Full_name'], email=application['email'])
+        conn.execute(query, full_name=application['full_name'], email=application['email'])

@@ -21,8 +21,8 @@ def list_jobs():
 def list_apps():
     return render_template('application_forms.html')
 
-@app.route('/jobs/<id>/apply', methods=["post"])
-def apply_job(id):
+@app.route('/jobs/apply', methods=["post"])
+def apply_job():
     data = request.form
     return jsonify(data)
 

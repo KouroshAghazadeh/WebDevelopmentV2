@@ -24,7 +24,7 @@ def list_apps():
 @app.route('/jobs/apply', methods=["post"])
 def apply_job():
     data = request.form
-    render_template('application_submitted.html', application=data)
+    return render_template('application_submitted.html', application=data)
 
 if __name__ == '__main__':
     app.run(debug=True)

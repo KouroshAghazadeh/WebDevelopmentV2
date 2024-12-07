@@ -15,5 +15,9 @@ def list_jobs():
     jobs_list = [dict(job) for job in jobs]
     return jsonify(jobs_list)
 
+@app.route('/app_forms')
+def list_apps():
+    return render_template('application_forms.html')
+
 if __name__ == '__main__':
     app.run(debug=True)

@@ -1,7 +1,7 @@
 from crypt import methods
 
 from flask import Flask, render_template, jsonify, request
-from database import load_jobs_from_db
+from database import load_jobs_from_db, add_application_to_db
 
 app = Flask(__name__)
 
@@ -24,6 +24,7 @@ def list_apps():
 @app.route('/jobs/apply', methods=["post"])
 def apply_job():
     data = request.form
+    add_application_to_db(data)
     return render_template('application_submitted.html', application=data)
 
 if __name__ == '__main__':
